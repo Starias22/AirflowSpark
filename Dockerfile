@@ -13,7 +13,7 @@ USER root
 # Add the repository line to /etc/apt/sources.list
 RUN echo "deb http://deb.debian.org/debian/ sid main" >> /etc/apt/sources.list
 
-RUN apt-get update && apt-get upgrade -y && apt-get install -y apt-transport-https && apt-get install -y openjdk-21-jdk
+RUN apt-get update && apt-get upgrade -y && apt-get install -y apt-transport-https && apt-get install -y openjdk-21-jdk && apt-get clean  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Set JAVA_HOME
 ENV JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64/
