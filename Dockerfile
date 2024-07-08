@@ -20,6 +20,8 @@ ENV JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64/
 
 RUN export JAVA_HOME
 
+# Set timezone to UTC
+ENV TZ=UTC
 
 USER airflow
 
