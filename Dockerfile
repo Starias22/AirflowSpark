@@ -4,7 +4,7 @@
 #
 
 # Stage 1: Build Java environment
-FROM apache/airflow:2.9.2-python3.11
+FROM apache/airflow:2.9.1-python3.11
 
 
 USER root
@@ -21,7 +21,7 @@ ENV JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64/
 RUN export JAVA_HOME
 
 # Set timezone to UTC
-ENV TZ=UTC
+#ENV TZ=UTC
 
 USER airflow
 
