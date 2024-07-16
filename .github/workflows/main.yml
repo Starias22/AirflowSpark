@@ -1,4 +1,4 @@
-name: Build Docker Container
+name: Build and Push airflow-spark Docker Image on DockerHub
 
 on:
   push:
